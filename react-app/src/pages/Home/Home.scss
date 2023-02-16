@@ -1,0 +1,27 @@
+.home-div {
+    padding: 4em 9em;
+    max-width: 2000px;
+    h1 {
+      font-size: 7em;
+    }
+  
+    p {
+      font-size: 1.4em;
+    }
+    .socials {
+      display: flex;
+    }
+    .socials {
+      display: flex;
+      gap: 2em;
+      width: 100%;
+      justify-content: center;
+      margin: 5em 0 2em;
+      i {
+        cursor: pointer;
+        font-size: 3em;
+        color: rgb(255, 251, 0);
+      }
+    }
+  }
+  

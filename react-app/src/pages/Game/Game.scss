@@ -1,0 +1,150 @@
+.game-container{
+    display: flex;
+    gap: 40px;
+    .side-div{
+        width: 6em;
+        display: flex;
+        align-items: center;
+    }
+    .restart-btn{
+        place-self: center;
+        
+        height: 6em;
+        width: 6em;
+       font-weight: 500;
+        line-height: 0;
+        border-radius: 50%;
+    }
+    .win-streak{
+        text-align: center;
+
+h3{
+    font-size: 6em!important;
+}
+h4{
+    font-size: 2.5em;
+}
+        
+    }
+}
+
+.game-div {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: center;
+  transition: all ease 0.3s;
+  &.playing{
+    translate: 0 10%;
+  }
+}
+
+.computer-pick-div {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  .computer-icon {
+    display: flex;
+    width: 170px;
+    height: 170px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    transition: all ease 0.5s;
+
+    h5 {
+      padding-top: 18%;
+      font-size: 2.5em;
+    }
+    &.picked {
+      opacity: 0;
+      scale: 0.5;
+    }
+  }
+  .computer-pick {
+    position: absolute;
+    opacity: 0;
+    scale: 0.5;
+    justify-content: center;
+    transition: all ease 0.5s;
+    &.picked {
+      translate: 0 -10%;
+      opacity: 1;
+      scale: 1.4;
+    }
+  }
+  .computer-pick-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    h4 {
+      text-align: center;
+      margin: 0;
+      font-size: 4em;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  position: relative;
+}
+
+.icon {
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 5px rgba($color: #000000, $alpha: 0.3);
+}
+
+.option-btn {
+  transition: all ease 0.2s;
+
+  &:first-child {
+    grid-column: span 2;
+    justify-self: center;
+  }
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &:active {
+    filter: brightness(1);
+  }
+  &:disabled {
+    opacity: 0;
+  }
+  &.picked {
+    cursor: default;
+    pointer-events: none;
+    &:hover {
+      filter: none !important;
+    }
+    &:active {
+      filter: none !important;
+    }
+  }
+  &.picked-rock {
+    translate: 0 5%;
+    scale: 1.4;
+  }
+  &.picked-paper {
+    translate: 60% -112%;
+    scale: 1.4;
+  }
+  &.picked-scissors {
+    translate: -60% -112%;
+    scale: 1.4;
+  }
+}
